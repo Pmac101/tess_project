@@ -20,12 +20,6 @@
                 <img id="satellite" src="/static/satellite.png" alt="TESS satellite">
             </nav>
             <div class="sky-map">
-                <form id="form-sky" method="post">
-                    <h2>Search Sky Map</h2>
-{#                    <label for="target">Target:</label>#}
-                    <input type="text" id="target" name="target" value="{{ target }}" placeholder="Target">
-                    <button type="submit">Search</button>
-                </form>
                 <div id="aladin-lite-div"></div>
                 <script type="text/javascript">
                     var target = "{{ target }}";
@@ -36,6 +30,18 @@
                         aladin.gotoObject(target);
                     });
                 </script>
+                <div class="sky-map-input">
+                    <form id="form-search-target" method="post">
+                        <h2>Search for target:</h2>
+                        <input type="text" id="target" name="target" value="{{ target }}" placeholder="Target">
+                        <button type="submit">Search</button>
+                    </form>
+                    <form id="form-upload-list" method="post">
+                        <h2>Upload a target list:</h2>
+                        <input type="text" id="target-list" name="target-list" value="" placeholder="Target List">
+                        <button type="button">Search</button>
+                    </form>
+                </div>
             </div>
             <div class="query-container">
                 <div class="search-input">
