@@ -8,7 +8,7 @@ from astropy import units as u
 
 
 def index():
-    return render_template("target_list.html")
+    return render_template("index.html")
 
 
 def generate_sector_graphs(object_name, results):
