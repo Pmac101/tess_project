@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>TESS Proposal Tool</title>
+        <title>TESS - Target List Crafting Tool</title>
         <link rel="stylesheet" href="/static/style.css">
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
         <link rel="stylesheet" href="https://aladin.u-strasbg.fr/AladinLite/api/v2/latest/aladin.min.css" />
@@ -13,9 +13,9 @@
         <script src="https://aladin.u-strasbg.fr/AladinLite/api/v2/latest/aladin.min.js"></script>
     </head>
     <body>
-        <div class="main-container-index">
-            <nav>
-                <div class="nav-header">
+        <div class="main-container-target-list">
+             <nav>
+               <div class="nav-header">
                     <img id="logo" src="/static/nasa_logo.svg" alt="nasa logo">
                     <h1>Welcome to the TESS Proposal Tool</h1>
                     <img id="satellite" src="/static/satellite.png" alt="TESS satellite">
@@ -27,12 +27,29 @@
                         <li><a href="{{ url_for('target_list_page')}}">Target List Crafting Tool</a></li>
                     </ul>
                 </div>
+                 {% if error %}
+                     <div ID="error" class="alert alert-danger">{{ error }}</div>
+                 {% endif %}
             </nav>
-            <div class="index-2">
-                <h1>grid box 2...need to add overview of proposal tool/</h1>
+            <form id="form-upload-list-graphs" method="post">
+                <h2>Upload a target list:</h2>
+                <input type="text" id="target-list-graphs" name="target-list" value="" placeholder="Target List">
+                <button type="button">Search</button>
+            </form>
+            <div class="plot1">
+                {{ diagram1|safe }}
             </div>
-            <div class="index-3">
-                <h1>grid box 3...brief description of tools</h1>
+            <div class="plot2">
+                {{ diagram2|safe }}
+            </div>
+            <div class="plot3">
+                {{ diagram4|safe }}
+            </div>
+            <div class="plot4">
+                {{ diagram3|safe }}
+            </div>
+            <div class="download-results-graph">
+               <p>Download results as <a href="{{ url_for('download', results=results) }}">CSV file</a></p>
             </div>
         </div>
     </body>
