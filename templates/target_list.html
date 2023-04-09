@@ -31,11 +31,17 @@
                      <div ID="error" class="alert alert-danger">{{ error }}</div>
                  {% endif %}
             </nav>
-            <form id="form-upload-list-graphs" method="post">
-                <h2>Upload a target list:</h2>
-                <input type="text" id="target-list-graphs" name="target-list" value="" placeholder="Target List">
-                <button type="button">Search</button>
-            </form>
+            <div>
+                <form id="form-upload-list-graphs" method="post">
+                    <h2>Upload a target list:</h2>
+                    <input type="text" id="target-list-graphs" name="target-list" value="" placeholder="Target List">
+                    <button type="button">Search</button>
+                </form>
+                <div class="csv-upload-graphs">
+                    <input type="file" name="csv_file">
+                    <button type="submit">Search</button>
+                </div>
+            </div>
             <div class="plot1">
                 {{ diagram1|safe }}
             </div>
