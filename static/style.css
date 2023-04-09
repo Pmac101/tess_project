@@ -278,6 +278,7 @@ tr:nth-child(even) {
     align-self: center;
     height: 100%;
     margin: 2px;
+    border-style: dashed;
 }
 
 .plot2 {
@@ -285,6 +286,7 @@ tr:nth-child(even) {
     align-self: center;
     height: 100%;
     margin: 2px;
+    border-style: dashed;
 }
 
 .plot3 {
@@ -292,6 +294,7 @@ tr:nth-child(even) {
     align-self: center;
     height: 100%;
     margin: 2px;
+    border-style: dashed;
 }
 
 .plot4 {
@@ -299,6 +302,7 @@ tr:nth-child(even) {
     align-self: center;
     height: 100%;
     margin: 2px;
+    border-style: dashed;
 }
 
 .download-results-graph {
