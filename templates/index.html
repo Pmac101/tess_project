@@ -17,7 +17,7 @@
             <nav>
                 <div class="nav-header">
                     <img id="logo" src="/static/nasa_logo.svg" alt="nasa logo">
-                    <h1>Welcome to the TESS Proposal Tool</h1>
+                    <h1>TESS Proposal Tool</h1>
                     <img id="satellite" src="/static/satellite.png" alt="TESS satellite">
                 </div>
                 <div class="nav-menu">
@@ -28,11 +28,26 @@
                     </ul>
                 </div>
             </nav>
-            <div class="index-2">
-                <h1>grid box 2...need to add overview of proposal tool/</h1>
-            </div>
-            <div class="index-3">
-                <h1>grid box 3...brief description of tools</h1>
+            <div class="secondary-container-index">
+                <h1>Welcome!</h1>
+                <p>This web app was created in order to allow users to interact with and explore data from the TESS mission. You can conveniently find data regarding observations,
+                    such as which sector is being viewed and by which camera, as well as the observation date.
+                </p>
+                <p>To get started, simply select which tool you would like to use. From there, you can easily search by entering coordinates, an object name, or TIC ID.</p>
+                <div class="tool-container">
+                    <div class="tool-visualization">
+                        <a href="{{ url_for('target_visualization_page')}}">
+                            <h3>Target Visualization Tool</h3>
+                            <p>View astronomical images of a target via the Sky Map.</p>
+                        </a>
+                    </div>
+                    <div class="tool-list">
+                        <a href="{{ url_for('target_list_page')}}">
+                            <h3>Target List Crafting Tool</h3>
+                            <p>View HR diagram, Magnitude and Distance histograms</p>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </body>

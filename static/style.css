@@ -45,7 +45,7 @@ nav {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 50px;
+    /*margin-bottom: 50px;*/
 }
 
 .nav-header {
@@ -120,15 +120,73 @@ h1 {
 }
 
 /************************ Index - divs ************************/
-.index-2 {
-    grid-area: 2 / 1 / 4 / 3;
-    border-style: dashed;
+.secondary-container-index {
+    grid-area: 2 / 1 / 5 / 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ccd1d1;
+    background-image: url("/static/bg_space.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.index-3 {
-    grid-area: 2 / 3 / 4 / 5;
-    border-style: dashed;
+.secondary-container-index a {
+    text-decoration: none;
+    color: #ccd1d1;
 }
+
+.secondary-container-index h3 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.secondary-container-index p {
+    margin: 20px 10px;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+
+
+.tool-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.tool-visualization,
+.tool-list{
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.tool-visualization:hover,
+.tool-list:hover {
+    background: rgba(236, 28, 36, 0.25);
+    cursor: pointer;
+}
+
+
+
+.tool-visualization {
+    margin-right: 30px;
+}
+
+.tool-list {
+    margin-left: 30px;
+}
+
 
 /************************ Target Visualization - Sky Map ************************/
 .sky-map {
@@ -153,7 +211,6 @@ h1 {
     flex-direction: column;
     margin-top: 30px;
     margin-left: 10px;
-
 }
 
 #aladin-lite-div {
@@ -228,6 +285,13 @@ input {
     flex-direction: column;
     align-items: center;
     margin-bottom: 5px;
+}
+
+.results-container a {
+    color: #ccd1d1;
+}
+.results-container a:hover {
+    color: #ec1c24;
 }
 
 .table-container {

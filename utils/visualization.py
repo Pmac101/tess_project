@@ -7,8 +7,12 @@ from bokeh.models import ColumnDataSource
 from astropy import units as u
 
 
+
 def index():
-    return render_template("index.html")
+    # sets <table> container visibility to 'hidden' upon page load
+    table_visibility = 'hidden'
+
+    return render_template("index.html", table_visibility=table_visibility)
 
 
 def generate_sector_graphs(object_name, results):
@@ -16,6 +20,7 @@ def generate_sector_graphs(object_name, results):
     for result in results:
         sector_graphs.append(sector_graph(object_name, [result], result[1]))
     return sector_graphs
+
 
 
 def hr_diagram(luminosity, temperature, star_name, sector_number):
@@ -138,3 +143,4 @@ def sector_graph(object_name, results, cycle):
     resources = Resources(mode='cdn')
     html4 = file_html(p, resources=resources,
                       title=f"Sectors Observed for {object_name}")
+    return html4
