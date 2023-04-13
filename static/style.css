@@ -275,7 +275,7 @@ input {
     margin-bottom: 10px;
 }
 
-.input-radius {
+.query-input-radius {
     width: 150px;
 }
 
@@ -386,24 +386,70 @@ tr:nth-child(even) {
 
     h2,
     caption {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
     #aladin-lite-div {
         height: 300px;
         width: 300px;
     }
+    /******************* Nav bar *******************/
+    .nav-menu a {
+        font-size: 1.1rem;
+    }
 
-    .search-input-1 input[type="text"] {
-        width: 200px;
+    /******************* Index page *******************/
+    .secondary-container-index h3 {
+        font-size: 1.5rem;
+    }
+
+    .secondary-container-index p {
+        padding: 0 10px;
+        font-size: 1.2rem;
+    }
+
+    /******************* Target Visualization page *******************/
+    .sky-map {
+        margin-top: 20px;
+    }
+
+    .search-input {
+        margin: 10px 0 0 0;
+    }
+
+    #form-csv-upload-skymap {
+    margin-bottom: 0;
     }
 
     .search-csv {
-        width: 80%;
+        width: 90%;
+        margin: 0;
+    }
+
+    .search-csv-buttons {
+      display: flex;
+      justify-content: center;
+      margin: 10px 0;
+    }
+
+    .query-input-RA {
+        width: 200px;
+    }
+
+    .query-input-radius {
+        width: 100px;
+    }
+
+    .query-input-sector {
+        width: 145px;
     }
 
     .search-csv h2 {
-        text-align: left;
+        text-align: center;
     }
 
+    .results-container {
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
 }

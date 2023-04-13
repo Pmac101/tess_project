@@ -35,18 +35,14 @@
                 </p>
                 <p>To get started, simply select which tool you would like to use. From there, you can easily search by entering coordinates, an object name, or TIC ID.</p>
                 <div class="tool-container">
-                    <div class="tool-visualization">
-                        <a href="{{ url_for('target_visualization_page')}}">
-                            <h3>Target Visualization Tool</h3>
-                            <p>View astronomical images of a target via the Sky Map.</p>
-                        </a>
-                    </div>
-                    <div class="tool-list">
-                        <a href="{{ url_for('target_list_page')}}">
-                            <h3>Target List Crafting Tool</h3>
-                            <p>View HR diagram, Magnitude and Distance histograms</p>
-                        </a>
-                    </div>
+                    <a class="tool-visualization" href="{{ url_for('target_visualization_page')}}">
+                        <h3>Target Visualization Tool</h3>
+                        <p>View astronomical images of a target via the Sky Map.</p>
+                    </a>
+                    <a class="tool-list" href="{{ url_for('target_list_page')}}">
+                        <h3>Target List Crafting Tool</h3>
+                        <p>View HR diagram, Magnitude and Distance histograms</p>
+                    </a>
                 </div>
             </div>
         </div>
